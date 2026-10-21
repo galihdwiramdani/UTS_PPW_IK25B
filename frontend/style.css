@@ -231,19 +231,95 @@ a:hover {
   border-radius: var(--radius);
   box-shadow: var(--bayangan-besar);
   padding: 16px;
-  width: 280px;
+  width: 400px;
 }
 
 .mock-kartu.satu {
   top: 10px;
   left: 0;
   transform: rotate(-4deg);
+  animation: melayangSatu 20s ease-in-out infinite
 }
 
 .mock-kartu.dua {
   top: 150px;
   right: 0;
   transform: rotate(3deg);
+  animation: melayangDua 20s ease-in-out infinite;
+}
+
+@keyframes melayangSatu {
+
+  0%,100% {
+    transform: rotate(-4deg) translateY(0px);
+  }
+  10% {
+    transform: rotate(-4deg) translateY(25px);
+  }
+  20% {
+    transform: rotate(-4deg) translateY(0px);
+  }
+  30% {
+    transform: rotate(-4deg) translateY(25px);
+  }
+  40% {
+    transform: rotate(-4deg) translateY(0px);
+  }
+  50% {
+    transform: rotate(-4deg) translateY(25px);
+  }
+  60% {
+    transform: rotate(-4deg) translateY(-500px);
+  }
+  70% {
+    transform: rotate(-4deg) translateY(25px);
+  }
+  80% {
+    transform: rotate(-4deg) translateY(0px);
+  }
+  90% {
+    transform: rotate(-4deg) translateY(25px);
+  }
+  
+}
+
+@keyframes melayangDua {
+  0%,100% {
+      transform: rotate(3deg) translateY(0px);
+    }
+  
+    10% {
+      transform: rotate(3deg) translateY(25px);
+    }
+  
+    20% {
+      transform: rotate(3deg) translateY(0px);
+    }
+  
+    30% {
+      transform: rotate(3deg) translateY(25px);
+    }
+  
+    40% {
+      transform: rotate(3deg) translateY(0px);
+    }
+  
+    50% {
+      transform: rotate(3deg) translateY(25px);
+    }
+  
+    60% {
+      transform: rotate(3deg) translateY(-500px);
+    }
+    70% {
+      transform: rotate(3deg) translateY(25px);
+    }
+    80% {
+      transform: rotate(3deg) translateY(0px);
+    }
+    90% {
+      transform: rotate(3deg) translateY(25px);
+    }
 }
 
 .mock-baris {
