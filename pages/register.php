@@ -1,49 +1,5 @@
 <?php
-session_start();
-
-$error = '';
-$success = '';
-
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $username = trim($_POST['username'] ?? '');
-    $email = trim($_POST['email'] ?? '');
-    $password = $_POST['password'] ?? '';
-    $confirm_password = $_POST['konfirmasi_password'] ?? '';
-
-    if (empty($username) || empty($email) || empty($password)) {
-        $error = "Semua kolom wajib diisi!";
-    } elseif ($password != $confirm_password) {
-      $error = "Password tidak sama";
-    } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $error = "Format email tidak valid!";
-    } else {
-        $file = 'users.json';
-        $users = file_exists($file) ? json_decode(file_get_contents($file), true) : [];
-        if (!is_array($users)) $users = [];
-
-        $emailExists = false;
-        foreach ($users as $user) {
-            if (strtolower($user['email']) === strtolower($email)) {
-                $emailExists = true;
-                break;
-            }
-        }
-
-        if ($emailExists) {
-            $error = "Email sudah terdaftar!";
-        } else {
-            $newUser = [
-                'username' => $username,
-                'email' => $email,
-                'password' => password_hash($password, PASSWORD_DEFAULT)
-            ];
-
-            $users[] = $newUser;
-            file_put_contents($file, json_encode($users, JSON_PRETTY_PRINT));
-            $success = "Pendaftaran berhasil! Silakan <a href='login.php'>Login di sini</a>.";
-        }
-    }
-}
+require dirname(__DIR__) . '/includes/register_process.php';
 ?>
 
 <!DOCTYPE html>
@@ -53,24 +9,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Daftar - Kumpul</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="assets/style.css">
 </head>
 
 <body>
 
   <?php if ($error): ?>
   <p style="color: red;">
-    <?= $error ?>
+    <?= htmlspecialchars($error, ENT_QUOTES, 'UTF-8') ?>
   </p>
   <?php endif; ?>
   <?php if ($success): ?>
   <p style="color: green;">
-    <?= $success ?>
+    Pendaftaran berhasil! Silakan <a href="login.php">Login di sini</a>.
   </p>
   <?php endif; ?>
 
   <main class="halaman-form">
-    <a href="index.html" class="logo">
+    <a href="/" class="logo">
       <span class="logo-ikon">K</span>
       Kumpul
     </a>
@@ -104,7 +60,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         Sudah punya akun? <a href="login.php">Login</a>
       </p>
     </section>
-    <a href="index.html" class="link-kembali">&larr; Kembali ke halaman awal</a>
+    <a href="/" class="link-kembali">&larr; Kembali ke halaman awal</a>
   </main>
 </body>
 

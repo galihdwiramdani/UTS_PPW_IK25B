@@ -1,10 +1,6 @@
 <?php
-session_start();
-
-if (!isset($_SESSION['user'])) {
-    header('Location: login.php');
-    exit;
-}
+require dirname(__DIR__) . '/includes/auth.php';
+require_authenticated_user();
 
 $username = $_SESSION['user']['username'];
 $email = $_SESSION['user']['email'];
@@ -16,19 +12,19 @@ $email = $_SESSION['user']['email'];
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Beranda - Kumpul</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
   <header class="navbar">
     <div class="navbar-isi">
-      <a href="beranda.html" class="logo">
+      <a href="/" class="logo">
         <span class="logo-ikon">K</span>
         Kumpul
       </a>
       <nav>
         <ul class="navbar-menu">
           <li><a href="#profil">Profil</a></li>
-          <li><a href="logout.php" class="logout">Logout</a></li>
+          <li><a href="../includes/logout_process.php" class="logout">Logout</a></li>
         </ul>
       </nav>
 
