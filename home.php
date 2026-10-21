@@ -1,3 +1,15 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['user'])) {
+    header('Location: login.php');
+    exit;
+}
+
+$username = $_SESSION['user']['username'];
+$email = $_SESSION['user']['email'];
+?>
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -27,8 +39,8 @@
       <div class="sidebar-sampul"></div>
       <div class="sidebar-isi">
         <div class="avatar-besar">N</div>
-        <h2 class="sidebar-nama">Nama Pengguna</h2>
-        <p class="sidebar-email">email@contoh.com</p>
+        <h2 class="sidebar-nama"><?= htmlspecialchars($username) ?>!</h2>
+        <p class="sidebar-email"><?= htmlspecialchars($email) ?>!</p>
         <div class="sidebar-statistik">
           <div><strong>0</strong><span>Postingan</span></div>
           <div><strong>0</strong><span>Teman</span></div>
