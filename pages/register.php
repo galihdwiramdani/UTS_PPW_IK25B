@@ -9,7 +9,7 @@ require dirname(__DIR__) . '/includes/register_process.php';
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Daftar - Kumpul</title>
-  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="../assets/style.css">
 </head>
 
 <body>
@@ -26,7 +26,7 @@ require dirname(__DIR__) . '/includes/register_process.php';
   <?php endif; ?>
 
   <main class="halaman-form">
-    <a href="/" class="logo">
+    <a href="../" class="logo">
       <span class="logo-ikon">K</span>
       Kumpul
     </a>
@@ -60,7 +60,7 @@ require dirname(__DIR__) . '/includes/register_process.php';
         Sudah punya akun? <a href="login.php">Login</a>
       </p>
     </section>
-    <a href="/" class="link-kembali">&larr; Kembali ke halaman awal</a>
+    <a href="../" class="link-kembali">&larr; Kembali ke halaman awal</a>
   </main>
 </body>
 
