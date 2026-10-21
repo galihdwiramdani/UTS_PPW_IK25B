@@ -1,16 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UTS - Kelompok 5</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kumpul - Terhubung dengan Teman</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <main>
-        <button><a href="login.php">Login</a></button>
-        <button><a href="Daftar.php">Daftar</a></button>
+
+  <div class="landing">
+    <header class="landing-header">
+      <a href="index.html" class="logo">
+        <span class="logo-ikon">K</span>
+        Kumpul
+      </a>
+    </header>
+
+    <main class="landing-main">
+      <section class="hero-teks">
+        <span class="hero-label">Selamat datang!</span>
+
+        <h1 class="hero-judul">
+          Bagikan cerita, <span class="teks-gradasi">terhubung</span> dengan teman
+        </h1>
+
+        <p class="hero-deskripsi">
+          Kumpul adalah ruang sederhana untuk berbagi status, menemukan
+          teman baru, dan tetap dekat dengan orang-orang yang kamu pedulikan.
+          Daftar gratis dan mulai bercerita hari ini
+        </p>
+
+        <div class="hero-tombol">
+          <a href="login.html" class="btn btn-utama">Login</a>
+          <a href="register.html" class="btn btn-garis">Daftar</a>
+        </div>
+      </section>
+
+      <aside class="hero-visual" aria-hidden="true">
+        <div class="mock-kartu satu">
+          <div class="mock-baris">
+            <div class="mock-avatar"></div>
+            <div style="flex:1">
+              <div class="mock-garis pendek"></div>
+              <div class="mock-garis" style="width:35%"></div>
+            </div>
+          </div>
+          <div class="mock-garis sedang"></div>
+          <div class="mock-garis"></div>
+          <div class="mock-gambar"></div>
+        </div>
+
+        <div class="mock-kartu dua">
+          <div class="mock-baris">
+            <div class="mock-avatar" style="background: linear-gradient(135deg,#ff7a59,#a55eea)"></div>
+            <div style="flex:1">
+              <div class="mock-garis pendek"></div>
+              <div class="mock-garis" style="width:35%"></div>
+            </div>
+          </div>
+          <div class="mock-garis"></div>
+          <div class="mock-garis sedang"></div>
+        </div>
+      </aside>
+
     </main>
+
+    <footer class="landing-footer">
+      &copy; 2026 Kumpul &middot; Proyek UTS Perancangan dan Pemrograman Website
+    </footer>
+
+  </div>
+
 </body>
 </html>
