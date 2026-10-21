@@ -6,10 +6,12 @@ $_SESSION = [];
 session_unset();
 session_destroy();
 
-$scriptDirectory = dirname($_SERVER['SCRIPT_NAME'] ?? '/');
-$baseDirectory = basename($scriptDirectory) === 'includes'
-    ? dirname($scriptDirectory)
-    : $scriptDirectory;
+// $scriptDirectory = dirname($_SERVER['SCRIPT_NAME'] ?? '/');
+// $baseDirectory = basename($scriptDirectory) === 'includes'
+//     ? dirname($scriptDirectory)
+//     : $scriptDirectory;
 
-header('Location: ' . rtrim($baseDirectory, '/') . '/index.php');
+// header('Location: ' . rtrim($baseDirectory, '/') . '/index.php');
+
+header('Location: ../');
 exit;
