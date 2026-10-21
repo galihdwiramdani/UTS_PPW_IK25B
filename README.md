@@ -5,7 +5,7 @@
 
 ## Akun Login
 - **Email:** `a@a.a`
-- **Password:** `qwerty`
+- **Password:** `12345678`
 
 ## Deskripsi
 Website ini merupakan proyek Ujian Tengah Semester (UTS) mata kuliah Pemrograman dan Pengembangan Web (PPW). Website dikembangkan menggunakan PHP, HTML, CSS, dan JSON dengan fitur utama:
