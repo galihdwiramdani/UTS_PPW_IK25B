@@ -41,7 +41,7 @@ require dirname(__DIR__) . '/includes/register_process.php';
         </div>
         <div class="grup-input">
           <label for="email">Email</label>
-          <input type="email" id="email" name="email" placeholder="galih@chelsye.heart" required>
+          <input type="email" id="email" name="email" placeholder="galih@example.app" required>
         </div>
         <div class="grup-input">
           <label for="password">Password</label>
