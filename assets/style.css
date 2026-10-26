@@ -4,8 +4,8 @@
   --warna-aksen: #ff7a59;
   --gradasi: linear-gradient(135deg, #6c5ce7 0%, #a55eea 55%, #ff7a59 100%);
 
-  --latar: #f0f2f5;          
-  --kartu: #ffffff;          
+  --latar: #f0f2f5;
+  --kartu: #ffffff;
   --teks: #1c1e21;
   --teks-redup: #65676b;
   --garis: #dfe3e8;
@@ -29,7 +29,14 @@ html {
 }
 
 body {
-  font-family: "Segoe UI", system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif;
+  font-family:
+    "Segoe UI",
+    system-ui,
+    -apple-system,
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
   background: var(--latar);
   color: var(--teks);
   line-height: 1.5;
@@ -80,7 +87,10 @@ a:hover {
   font-family: inherit;
   text-align: center;
   cursor: pointer;
-  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    background 0.15s ease;
 }
 
 .btn:hover {
@@ -117,7 +127,6 @@ a:hover {
   border-radius: var(--radius);
   box-shadow: var(--bayangan);
 }
-
 
 .landing {
   position: relative;
@@ -238,7 +247,7 @@ a:hover {
   top: 10px;
   left: 0;
   transform: rotate(-4deg);
-  animation: melayangSatu 20s ease-in-out infinite
+  animation: melayangSatu 20s ease-in-out infinite;
 }
 
 .mock-kartu.dua {
@@ -249,8 +258,8 @@ a:hover {
 }
 
 @keyframes melayangSatu {
-
-  0%,100% {
+  0%,
+  100% {
     transform: rotate(-4deg) translateY(0px);
   }
   10% {
@@ -280,46 +289,46 @@ a:hover {
   90% {
     transform: rotate(-4deg) translateY(25px);
   }
-  
 }
 
 @keyframes melayangDua {
-  0%,100% {
-      transform: rotate(3deg) translateY(0px);
-    }
-  
-    10% {
-      transform: rotate(3deg) translateY(25px);
-    }
-  
-    20% {
-      transform: rotate(3deg) translateY(0px);
-    }
-  
-    30% {
-      transform: rotate(3deg) translateY(25px);
-    }
-  
-    40% {
-      transform: rotate(3deg) translateY(0px);
-    }
-  
-    50% {
-      transform: rotate(3deg) translateY(25px);
-    }
-  
-    60% {
-      transform: rotate(3deg) translateY(500px);
-    }
-    70% {
-      transform: rotate(3deg) translateY(25px);
-    }
-    80% {
-      transform: rotate(3deg) translateY(0px);
-    }
-    90% {
-      transform: rotate(3deg) translateY(25px);
-    }
+  0%,
+  100% {
+    transform: rotate(3deg) translateY(0px);
+  }
+
+  10% {
+    transform: rotate(3deg) translateY(25px);
+  }
+
+  20% {
+    transform: rotate(3deg) translateY(0px);
+  }
+
+  30% {
+    transform: rotate(3deg) translateY(25px);
+  }
+
+  40% {
+    transform: rotate(3deg) translateY(0px);
+  }
+
+  50% {
+    transform: rotate(3deg) translateY(25px);
+  }
+
+  60% {
+    transform: rotate(3deg) translateY(500px);
+  }
+  70% {
+    transform: rotate(3deg) translateY(25px);
+  }
+  80% {
+    transform: rotate(3deg) translateY(0px);
+  }
+  90% {
+    transform: rotate(3deg) translateY(25px);
+  }
 }
 
 .mock-baris {
@@ -344,8 +353,12 @@ a:hover {
   margin-bottom: 8px;
 }
 
-.mock-garis.pendek { width: 55%; }
-.mock-garis.sedang { width: 80%; }
+.mock-garis.pendek {
+  width: 55%;
+}
+.mock-garis.sedang {
+  width: 80%;
+}
 
 .mock-gambar {
   height: 90px;
@@ -369,8 +382,16 @@ a:hover {
   justify-content: center;
   padding: 24px 16px;
   background:
-    radial-gradient(circle at 15% 10%, rgba(108, 92, 231, 0.18), transparent 40%),
-    radial-gradient(circle at 85% 90%, rgba(255, 122, 89, 0.18), transparent 40%),
+    radial-gradient(
+      circle at 15% 10%,
+      rgba(108, 92, 231, 0.18),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 85% 90%,
+      rgba(255, 122, 89, 0.18),
+      transparent 40%
+    ),
     var(--latar);
 }
 
@@ -417,7 +438,10 @@ a:hover {
   font-size: 1rem;
   font-family: inherit;
   color: var(--teks);
-  transition: border-color 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease,
+    background 0.15s ease;
 }
 
 .grup-input input::placeholder {
@@ -662,6 +686,23 @@ a:hover {
   overflow-wrap: anywhere;
 }
 
+.postingan-item {
+  margin-top: 15px;
+  padding: 15px;
+}
+
+.postingan-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.postingan-waktu {
+  font-size: 0.8em;
+  color: gray;
+}
+
 .feed-kosong {
   padding: 56px 24px;
   text-align: center;
@@ -679,7 +720,6 @@ a:hover {
 .feed-kosong p {
   color: var(--teks-redup);
 }
-
 
 @media (max-width: 860px) {
   .landing-main {
