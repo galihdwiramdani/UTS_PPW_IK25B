@@ -73,6 +73,7 @@ a:hover {
 .btn {
   display: inline-block;
   padding: 12px 28px;
+  border: 1px solid var(--gradasi);
   border-radius: 999px;
   font-size: 1rem;
   font-weight: 700;
@@ -268,7 +269,7 @@ a:hover {
     transform: rotate(-4deg) translateY(25px);
   }
   60% {
-    transform: rotate(-4deg) translateY(-500px);
+    transform: rotate(-4deg) translateY(-50px);
   }
   70% {
     transform: rotate(-4deg) translateY(25px);
@@ -308,7 +309,7 @@ a:hover {
     }
   
     60% {
-      transform: rotate(3deg) translateY(-500px);
+      transform: rotate(3deg) translateY(500px);
     }
     70% {
       transform: rotate(3deg) translateY(25px);
@@ -636,6 +637,29 @@ a:hover {
 
 .buat-status-bawah .btn {
   padding: 9px 26px;
+}
+
+.postingan {
+  padding: 20px;
+}
+
+.postingan-atas {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.postingan-atas time {
+  display: block;
+  margin-top: 3px;
+  color: var(--teks-redup);
+  font-size: 0.85rem;
+}
+
+.postingan-konten {
+  margin: 16px 0 0 56px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
 }
 
 .feed-kosong {

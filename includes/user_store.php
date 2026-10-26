@@ -2,17 +2,12 @@
 
 function load_users(): array
 {
-    $file = dirname(__DIR__) . '/data/users.json';
-    if (!file_exists($file)) {
+    $file = dirname(__DIR__) . '/data/users.php';
+    if (!is_file($file)) {
         return [];
     }
 
-    $contents = file_get_contents($file);
-    if ($contents === false) {
-        throw new RuntimeException('Data pengguna tidak dapat dibaca.');
-    }
-
-    $users = json_decode($contents, true, 512, JSON_THROW_ON_ERROR);
+    $users = require $file;
     if (!is_array($users)) {
         throw new UnexpectedValueException('Format data pengguna tidak valid.');
     }
@@ -22,8 +17,8 @@ function load_users(): array
 
 function save_users(array $users): void
 {
-    $file = dirname(__DIR__) . '/data/users.json';
-    $contents = json_encode($users, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_THROW_ON_ERROR);
+    $file = dirname(__DIR__) . '/data/users.php';
+    $contents = "<?php\n\nreturn " . var_export($users, true) . ";\n";
     if (file_put_contents($file, $contents, LOCK_EX) === false) {
         throw new RuntimeException('Data pengguna tidak dapat disimpan.');
     }
